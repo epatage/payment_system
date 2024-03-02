@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Buy cool new product</title>
+</head>
+  <body>
+    {% for item in items %}
+      <p><a href="{% url 'payment:item_info' item.id %}">{{ item.name }}</a> - {{ item.price }} $</p>
+    {% endfor %}
+  </body>
+</html>
